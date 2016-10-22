@@ -1,0 +1,170 @@
+// @import "../bourbon/bourbon.scss";
+// $color_color-line: #5686A8;
+$color_color-line: #D100FF;
+// $color_color-line: #9759A5;
+// $color_color-line: orange;
+$color_color-outline: transparent;
+$color_nav: white;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../img/background.jpg);
+    background-repeat: repeat;
+}
+
+.color-line {
+    width: 100%;
+    height: 3px;
+    background-color: $color_color-line;
+}
+
+nav {
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.button7 a,
+a.button3 {
+    display: inline-block;
+    //    padding: 0.8em 1em calc(.8em + 3px);
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    width: 100px;
+    border-radius: 3px;
+    transition: 0.2s;
+    background: darken($color_color-line, 10%);
+    // box-shadow: 0 -3px darken($color_color-line, 40%) inset;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
+    &:hover {
+        background: darken($color_color-line, 25%);
+    }
+    &:active {
+        background: darken($color_color-line, 25%);
+        box-shadow: 0 3px darken($color_color-line, 25%) inset;
+    }
+}
+
+a.button3 {
+    position: fixed;
+    top: 90%;
+    right: 95%;
+    bottom: 1%;
+    @extend a.button3;
+    // font-weight: 700;
+    // color: white;
+    // text-decoration: none;
+    // padding: 0.8em 1em calc(.8em + 3px);
+    // border-radius: 3px;
+    // background: darken($color_color-line, 10% );
+    // box-shadow: 0 -3px darken($color_color-line, 25%) inset;
+    // transition: 0.2s;
+    // &:hover {
+    //   background: darken($color_color-line, 25%);
+    // }
+    // &:active {
+    //   background: darken($color_color-line, 25%);
+    //   box-shadow: 0 3px darken($color_color-line, 25%) inset;
+    // }
+}
+
+.color-line2 {
+    // width: 100%;
+    // height: 3px;
+    // background-color: $color_color-line;
+    @extend .color-line;
+    margin-top: 100px;
+}
+
+#header {
+    font-size: 50px;
+    font-family: fantasy;
+    margin-left: 10%;
+    padding-top: 90px;
+    outline: 3px solid $color_color-outline;
+}
+
+.color-line3 {
+    margin-right: 20%;
+    margin-left: 10%;
+    height: 3px;
+    background-color: $color_color-line;
+    margin-top: 50px;
+}
+
+.content {
+    font-size: 20px;
+    margin-right: 20%;
+    margin-left: 10%;
+    margin-top: 50px;
+    font-family: monospace;
+}
+
+.photo {
+    margin-right: 20%;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 20px solid darken($color_color-line, 15%);
+    background: darken($color_color-line, 15%);
+    .img {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.photo_bio {
+    float: left;
+    margin-right: 10px;
+}
+
+.mmr1 {
+    margin-left: 10%;
+    margin-top: 50px;
+    border: 3px solid darken($color_color-line, 25%);
+    margin-right: 50%;
+    font-size: 32px;
+    font-family: fantasy;
+}
+
+.photo_bio2 {
+    float: left;
+    margin-right: 10px;
+}
+
+img.photo {
+    border-radius: 30%;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .mmr1 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .photo_bio2 {
+        float: none;
+        text-align: center;
+    }
+}
